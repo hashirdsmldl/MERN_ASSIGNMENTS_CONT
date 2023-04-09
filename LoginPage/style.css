@@ -1,0 +1,78 @@
+.container {
+  width: 400px; 
+ 
+  margin: 1em auto;
+  padding: 3em;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: url(back.jpg);
+  background-size: cover;
+}
+img
+{
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+ 
+}
+
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #f0ebeb;
+  margin: 1em auto;
+  padding: 10px;
+  display: block;
+  width: 100%;
+}
+
+input[type="submit"] {
+  
+  background-color:rgb(20, 199, 71);
+ 
+  padding: 10px 1em;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin: 2em auto;
+
+ border: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #333;
+}
+h2{
+  text-align: center;
+  color: 
+  rgb(20, 199, 71);
+}
+
+a{
+  
+  float:right;
+  text-decoration: none;
+  color: 
+  rgb(20, 199, 71);
+ 
+}
+label.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  
+}
+.belowbutton
+{
+  display: block;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
