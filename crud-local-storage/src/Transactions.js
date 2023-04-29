@@ -27,7 +27,7 @@ const Transaction = (props) => {
                       <td>{x.city}</td>
                       <td><Button onClick={()=>props.onDelete(x.id)}>Delete
                       </Button>    </td>
-                    <td>  <Button onClick={()=>props.onEdit(x)}>  Edit </Button>
+                    <td>  <Button onClick={() => props.onEdit(x)}>Edit</Button>
                         </td>
                    
                     </tr>

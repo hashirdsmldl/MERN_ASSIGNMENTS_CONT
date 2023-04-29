@@ -11,6 +11,8 @@ function FormTextExample() {
   const [editing, setEditing] = useState(false);
   const [editPerson, setEditPerson] = useState(null);
   useEffect(() => {
+
+ 
     const getTasks = JSON.parse(localStorage.getItem("userdata"));
     if (getTasks == null) {
       setPersonsInfo([]);
@@ -46,9 +48,9 @@ function FormTextExample() {
   }
 
   const handleEdit = (person) => {
-    setEditing(true);
+   
     setEditPerson(person);
-      
+    setEditing(true);
   }
  
 
@@ -56,7 +58,7 @@ function FormTextExample() {
     <>
       <Search searchVal={inputVal} onChange={onChange} />
       {editing ? (
-        <Edit  person={editPerson} />
+        <Edit  person={editPerson} info={personsInfo} setEditing={setEditing} updateInfo={setPersonsInfo} />
       ) : (
         <Add onAddPersonInfo={handleAddPersonInfo} />
       )}
