@@ -1,38 +1,32 @@
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { useState } from "react";
 
-const Add = ({onAddPersonInfo}) => {
-    const [name, setName] = useState("");
-    const [address, setAddress] = useState("");
-    const [city, setCity] = useState("");
+const Edit=({  person }) =>{
+    const [name, setName] = useState(person.name);
+    const [address, setAddress] = useState(person.address);
+    const [city, setCity] = useState(person.city);
    
 
-    const handleAddCar = (e) => {
+    const handleEdit = (e) => {
        
-        const obj = {
-            
-            name: name,
-            address: address,
-            city: city
-          };
+        // const obj = {
+        //     name: name,
+        //     address: address,
+        //     city: city
+        //   };
 
 
-        onAddPersonInfo(obj);
-        setName("");
-        setAddress("");
-        setCity("");
+        // onAddCar(obj);
+        // setName("");
+        // setAddress("");
+        // setCity("");
       };
 
     return (
         <Container>
             <Row className="pt-2">
                 <Col className="px-4" lg={4}>
-                <Form onSubmit={(e) => {
-    e.preventDefault();
-    if (name && address && city) {
-        handleAddCar();
-    }
-}}>
+                <Form onSubmit={handleEdit}>
                         <Form.Control
                             type="text"
                             placeholder="Name"
@@ -58,13 +52,14 @@ const Add = ({onAddPersonInfo}) => {
                             <option value="RawalPindi">RawalPindi</option>
                         </Form.Select>
                         <Button className="mt-3" type="submit">
-                            Add Records
+                          Edit Records
                         </Button>
                     </Form>
+                   
                 </Col>
             </Row>
         </Container>
     );
 };
 
-export default Add;
+export default Edit;

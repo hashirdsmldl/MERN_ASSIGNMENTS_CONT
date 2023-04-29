@@ -18,30 +18,26 @@ const Transaction = (props) => {
                       <th>Action</th>
                     </tr>
                   </thead>
-                  {  props.items.map((x)=> {
-                   return <tbody>
-                    <tr>
+                  
+                <tbody>
+                {  props.items.map((x)=> (
+                    <tr key={x.id}>
                       <td>{x.name}</td>
                       <td>{x.address}</td>
                       <td>{x.city}</td>
-                      <td><Button onClick={(e)=>
-                      {
-                        e.preventDefault()
-                        props.onDelete(x.id)
-                      }}>Delete</Button>    <Button onClick={(e)=>
-                        {
-                          e.preventDefault()
-                          props.onDelete(x.id)
-                        }}>Edit</Button></td>
+                      <td><Button onClick={()=>props.onDelete(x.id)}>Delete
+                      </Button>    </td>
+                    <td>  <Button onClick={()=>props.onEdit(x)}>  Edit </Button>
+                        </td>
                    
                     </tr>
                    
                  
-                   
-                  </tbody>
-                    })
+                ))
         
-                  }
+                  } 
+                  </tbody>
+                  
                 </Table>
     
               
