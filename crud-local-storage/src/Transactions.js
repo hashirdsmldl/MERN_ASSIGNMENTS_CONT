@@ -1,4 +1,4 @@
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 
 
 const Transaction = (props) => {
@@ -15,6 +15,7 @@ const Transaction = (props) => {
                       <th> Name</th>
                       <th>Address</th>
                       <th>City</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   {  props.items.map((x)=> {
@@ -23,6 +24,15 @@ const Transaction = (props) => {
                       <td>{x.name}</td>
                       <td>{x.address}</td>
                       <td>{x.city}</td>
+                      <td><Button onClick={(e)=>
+                      {
+                        e.preventDefault()
+                        props.onDelete(x.id)
+                      }}>Delete</Button>    <Button onClick={(e)=>
+                        {
+                          e.preventDefault()
+                          props.onDelete(x.id)
+                        }}>Edit</Button></td>
                    
                     </tr>
                    
