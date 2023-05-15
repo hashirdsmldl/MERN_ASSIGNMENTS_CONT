@@ -23,6 +23,7 @@ const Edit=(props) =>{
             return person;
           }
         });
+        console.log(updatedData)
         localStorage.setItem('userdata', JSON.stringify(updatedData));
         props.updateInfo(updatedData);
         props.setEditing(false);
